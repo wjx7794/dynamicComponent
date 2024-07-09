@@ -1,6 +1,6 @@
 ---
 hero:
-  title: library
+  title: dynamic
   description: A react library developed with dumi
   actions:
     - text: Hello
