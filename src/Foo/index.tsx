@@ -5,7 +5,7 @@ const Foo: FC<{ title: string }> = (props) => {
   return (
     <>
       <h4 style={{ color: 'red' }}>{props.title}</h4>
-      <Button type="primary">Primary Button</Button>
+      <Button type="primary">Primary Buttonxxx</Button>
     </>
   );
 };
