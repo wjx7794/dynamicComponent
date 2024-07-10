@@ -1,6 +1,6 @@
 {
   "name": "wjx-components",
-  "version": "0.0.1",
+  "version": "0.0.1-alpha1",
   "description": "A react library developed with dumi",
   "main": "dist/index.js",
   "module": "dist/index.js",
