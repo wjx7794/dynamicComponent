@@ -1,38 +1,37 @@
 {
   "name": "wjx-components",
   "version": "0.0.1-alpha1",
-  "description": "A react library developed with dumi",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
   "private": false,
+  "description": "A react library developed with dumi",
+  "homepage": "https://wjx7794.github.io/dynamicComponent",
   "repository": {
     "type": "git",
     "url": "https://github.com/wjx7794/dynamicComponent"
   },
-  "homepage": "https://wjx7794.github.io/dynamicComponent",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "deploy": "gh-pages -d docs-dist",
-    "start": "npm run dev",
-    "dev": "dumi dev",
     "build": "father build",
     "build:watch": "father dev",
+    "commit": "sh ./scripts/commit.sh",
+    "commitlint": "commitlint --config commitlint.config.js -e -V",
+    "deploy": "gh-pages -d docs-dist",
+    "dev": "dumi dev",
     "docs:build": "dumi build",
     "docs:preview": "dumi preview",
-    "prepare": "husky install && dumi setup",
     "doctor": "father doctor",
     "lint": "npm run lint:es && npm run lint:css",
     "lint:css": "stylelint \"{src,test}/**/*.{css,less}\"",
     "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
-    "prepublishOnly": "father doctor && npm run build"
+    "prepare": "husky install && dumi setup",
+    "prepublishOnly": "father doctor && npm run build",
+    "start": "npm run dev"
   },
-  "authors": [
-    "Jack"
-  ],
-  "license": "MIT",
-  "files": [
-    "dist"
-  ],
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
@@ -55,26 +54,26 @@
       "prettier --parser=typescript --write"
     ]
   },
-  "publishConfig": {
-    "access": "public"
-  },
-  "peerDependencies": {
-    "react": ">=16.9.0",
-    "react-dom": ">=16.9.0",
-    "antd": ">=4.24.12"
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.1.2",
-    "@commitlint/config-conventional": "^17.1.0",
+    "@commitlint/cli": "^17.8.1",
+    "@commitlint/config-conventional": "^17.8.1",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@umijs/lint": "^4.0.0",
     "antd": "^5.19.1",
+    "commitizen": "^4.3.0",
+    "commitlint-config-cz": "^0.13.3",
+    "cz-customizable": "^7.1.0",
     "dumi": "^2.3.0",
     "eslint": "^8.23.0",
     "father": "^4.1.0",
     "gh-pages": "^6.1.1",
-    "husky": "^8.0.1",
+    "husky": "^8.0.3",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "prettier-plugin-organize-imports": "^3.0.0",
@@ -82,5 +81,16 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "stylelint": "^14.9.1"
-  }
+  },
+  "peerDependencies": {
+    "antd": ">=4.24.12",
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "authors": [
+    "Jack"
+  ]
 }
