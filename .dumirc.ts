@@ -7,4 +7,7 @@ export default defineConfig({
   themeConfig: {
     name: 'Dynamic',
   },
+  alias: {
+    '@components': '/src/index.ts',
+  },
 });

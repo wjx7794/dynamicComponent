@@ -10,7 +10,9 @@
       "@@/*": [".dumi/tmp/*"],
       "dynamicComponent": ["src"],
       "dynamicComponent/*": ["src/*", "*"]
-    }
+    },
+    "allowImportingTsExtensions": true,
+    "noEmit": true
   },
   "include": [".dumirc.ts", "src/**/*"]
 }
