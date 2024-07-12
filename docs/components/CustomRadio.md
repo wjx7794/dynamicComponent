@@ -10,11 +10,14 @@ group:
   order: 1
 # 文档排序: order 越小越靠前，默认为 0
 order: 1
+title: 'CustomRadio'
 ---
 
 # CustomRadio
 
-动态单选组件
+动态单选组件。
+
+## 代码演示
 
 ```jsx
 import { CustomRadio } from '@components';
@@ -47,7 +50,7 @@ export default () => {
 };
 ```
 
-# API
+## API
 
 | 参数      | 说明                 | 类型                       | 默认值       |
 | --------- | -------------------- | -------------------------- | ------------ |
